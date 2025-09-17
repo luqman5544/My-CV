@@ -91,10 +91,12 @@
 
 ---
 
-## 📊 GitHub Widgets  
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=luqman5544)
+## 📊 Skills  
+<p align="center">
+  <img src="./skills-badges.svg" alt="Animated skill badges — Photoshop, Premiere Pro, Illustrator, After Effects, Node.js, CSS, HTML, PHP, WooCommerce, WordPress" />
+</p>
 
----
+
 
 ## 📫 Contact Me  
 - ✉️ [luqman.5544@gmail.com](mailto:luqman.5544@gmail.com)  
