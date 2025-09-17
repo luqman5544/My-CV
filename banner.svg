@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="280" viewBox="0 0 1200 280"
-     role="img" aria-label="Muhammad Luqman Khan - CV banner electrified AI style">
-
+     width="1200" height="260" viewBox="0 0 1200 260"
+     role="img" aria-label="Muhammad Luqman Khan - AI Banner">
   <defs>
-    <!-- animated gradient -->
-    <linearGradient id="pulse" x1="0%" x2="100%">
-      <stop offset="0%" stop-color="#0f0">
-        <animate attributeName="stop-color" dur="6s"
-                 values="#0f0;#08f;#f0f;#0f0" repeatCount="indefinite"/>
+    <!-- background gradient -->
+    <linearGradient id="g" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#0f172a">
+        <animate attributeName="stop-color" dur="8s"
+                 values="#0f172a;#0b3d91;#0f172a" repeatCount="indefinite"/>
       </stop>
-      <stop offset="100%" stop-color="#08f">
-        <animate attributeName="stop-color" dur="6s"
-                 values="#08f;#f0f;#0f0;#08f" repeatCount="indefinite"/>
+      <stop offset="50%" stop-color="#0b3d91">
+        <animate attributeName="stop-color" dur="8s"
+                 values="#0b3d91;#1f6f53;#0b3d91" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#1f6f53">
+        <animate attributeName="stop-color" dur="8s"
+                 values="#1f6f53;#0f172a;#1f6f53" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
-    <!-- glow effect -->
+    <!-- neon blue -->
+    <linearGradient id="neon" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#0ff">
+        <animate attributeName="stop-color" dur="6s"
+                 values="#0ff;#09f;#0ff" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#09f">
+        <animate attributeName="stop-color" dur="6s"
+                 values="#09f;#0ff;#09f" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- neon glow filter -->
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -26,69 +41,90 @@
     </filter>
   </defs>
 
-  <!-- dark background -->
-  <rect width="1200" height="280" fill="#020510"/>
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="260" fill="url(#g)"/>
 
-  <!-- moving circuit lines -->
-  <g stroke="url(#pulse)" stroke-width="2" opacity="0.35">
-    <line x1="0" y1="60" x2="1200" y2="60">
+  <!-- circuits -->
+  <g stroke="url(#neon)" stroke-width="1.5" opacity="0.25">
+    <line x1="0" y1="70" x2="1200" y2="70">
       <animate attributeName="stroke-dasharray" dur="4s"
                values="0,1200;1200,0" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="140" x2="1200" y2="140">
-      <animate attributeName="stroke-dasharray" dur="5s"
-               values="0,1200;1200,0" repeatCount="indefinite" begin="0.5s"/>
+    <line x1="0" y1="130" x2="1200" y2="130">
+      <animate attributeName="stroke-dasharray" dur="6s"
+               values="0,1200;1200,0" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="220" x2="1200" y2="220">
-      <animate attributeName="stroke-dasharray" dur="3.5s"
-               values="0,1200;1200,0" repeatCount="indefinite" begin="1s"/>
+    <line x1="0" y1="190" x2="1200" y2="190">
+      <animate attributeName="stroke-dasharray" dur="5s"
+               values="0,1200;1200,0" repeatCount="indefinite"/>
     </line>
   </g>
 
-  <!-- floating particles -->
-  <g fill="url(#pulse)" opacity="0.8">
+  <!-- particles -->
+  <g fill="url(#neon)" opacity="0.6">
     <circle r="4">
-      <animateMotion dur="12s" repeatCount="indefinite"
-                     path="M 100 80 Q 600 20 1100 80 T 100 80"/>
+      <animateMotion dur="10s" repeatCount="indefinite"
+        path="M 0 200 Q 600 40 1200 200" />
     </circle>
     <circle r="3">
-      <animateMotion dur="10s" repeatCount="indefinite"
-                     path="M 200 220 Q 700 260 1100 200 T 200 220"/>
-    </circle>
-    <circle r="5">
       <animateMotion dur="14s" repeatCount="indefinite"
-                     path="M 50 150 Q 600 100 1150 150 T 50 150"/>
+        path="M 0 80 Q 600 200 1200 80" />
     </circle>
   </g>
 
   <!-- name + role -->
-  <g transform="translate(70,110)" font-family="Segoe UI, Roboto, Arial, sans-serif">
-    <text x="0" y="0" font-size="44" font-weight="bold"
-          fill="url(#pulse)" filter="url(#glow)">
+  <g transform="translate(60,85)" font-family="Segoe UI, Roboto, Arial, sans-serif">
+    <!-- neon glow behind -->
+    <text x="0" y="0" font-size="44" font-weight="700"
+          fill="url(#neon)" filter="url(#glow)">
       Muhammad Luqman Khan
     </text>
-    <text x="0" y="48" font-size="22" fill="#cfeaff" opacity="0.9">
-      Electrical Engineer • Artificial Intelligence Specialist
+    <!-- crisp white inside stroke on top -->
+    <text x="0" y="0" font-size="44" font-weight="700"
+          fill="#ffffff" stroke="#ffffff" stroke-width="1" paint-order="stroke fill">
+      Muhammad Luqman Khan
+      <animate attributeName="opacity" dur="2s"
+               values="1;0.7;1" repeatCount="indefinite"/>
     </text>
+
+    <text x="0" y="50" font-size="20" fill="#e6f0ff">
+      Master of Electrical Engineering — Artificial Intelligence (Air University)
+    </text>
+
+    <!-- underline -->
+    <g transform="translate(0,70)">
+      <rect x="0" y="0" width="420" height="6" rx="3" fill="#ffffff" opacity="0.12"/>
+      <rect x="0" y="0" width="120" height="6" rx="3" fill="url(#neon)">
+        <animate attributeName="x" dur="4s" values="0;300;0" repeatCount="indefinite"/>
+        <animate attributeName="width" dur="4s" values="120;40;120" repeatCount="indefinite"/>
+      </rect>
+    </g>
   </g>
 
-  <!-- underline neural pulse -->
-  <rect x="70" y="140" width="360" height="5" rx="3" fill="url(#pulse)">
-    <animate attributeName="width" dur="3s"
-             values="80;360;80" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- right-side contact box -->
-  <g transform="translate(780,90)" font-family="Segoe UI, Roboto, Arial, sans-serif" fill="#fff">
-    <rect x="0" y="0" width="370" height="140" rx="12"
-          fill="rgba(255,255,255,0.05)" stroke="url(#pulse)" stroke-width="1.5"/>
-    <text x="20" y="35" font-size="15" fill="#9ff">📧 luqman.5544@gmail.com</text>
-    <text x="20" y="65" font-size="15" fill="#9ff">📞 +92 335 9920328</text>
+  <!-- contact box -->
+  <g transform="translate(760,80)" font-family="Segoe UI, Roboto, Arial, sans-serif" fill="#fff">
+    <rect x="0" y="0" rx="8" ry="8" width="360" height="120"
+          fill="rgba(255,255,255,0.06)" stroke="url(#neon)" stroke-width="1"/>
+    <text x="18" y="28" font-size="14" font-weight="700">Contact</text>
+    <text x="18" y="55" font-size="13" fill="#e6f0ff">📧 luqman.5544@gmail.com</text>
+    <text x="18" y="77" font-size="13" fill="#e6f0ff">📞 +92 335 9920328</text>
     <a href="https://www.linkedin.com/in/muhammad-luqman-83a1322b0/" target="_blank">
-      <text x="20" y="95" font-size="15" fill="#9ff">🔗 linkedin.com/in/muhammad-luqman-83a1322b0</text>
+      <text x="18" y="99" font-size="13" fill="#e6f0ff">🔗 linkedin.com/in/muhammad-luqman-83a1322b0</text>
     </a>
   </g>
 
-  <!-- title -->
-  <title>Muhammad Luqman Khan — Electrified AI banner</title>
+  <!-- AI badge (wider) -->
+  <g transform="translate(60,180)" font-family="Segoe UI, Roboto, Arial, sans-serif">
+    <rect x="0" y="0" rx="6" width="320" height="52"
+          fill="rgba(255,255,255,0.04)" stroke="url(#neon)" stroke-width="1"/>
+    <text x="16" y="22" font-size="13" fill="#fff">⚡ Engineering • AI • Hyperspectral Imaging</text>
+    <text x="16" y="40" font-size="12" fill="#cfe8ff">PyTorch · TensorFlow · Python · C++</text>
+    <!-- pulsing neuron -->
+    <circle cx="290" cy="26" r="6" fill="url(#neon)" opacity="0.8">
+      <animate attributeName="r" dur="1.8s" values="6;14;6" repeatCount="indefinite"/>
+      <animate attributeName="opacity" dur="1.8s" values="0.8;0.2;0.8" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <title>Muhammad Luqman Khan — AI Banner with Inside Stroke & Neon Glow</title>
 </svg>
