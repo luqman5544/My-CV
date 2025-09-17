@@ -92,10 +92,7 @@
 ---
 
 ## 📊 GitHub Widgets  
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=luqman5544&show_icons=true&theme=tokyonight" alt="GitHub Stats" width="45%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luqman5544&layout=compact&theme=tokyonight" alt="Top Languages" width="45%" />
-</p>
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=luqman5544)
 
 ---
 
