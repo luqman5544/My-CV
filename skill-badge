@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="120" viewBox="0 0 1000 120" role="img" aria-label="Animated skill badges: Photoshop, Premiere Pro, Illustrator, After Effects, Node.js, CSS, HTML, PHP, WooCommerce, WordPress">
+  <title>Animated skill badges — Photoshop, Premiere Pro, Illustrator, After Effects, Node.js, CSS, HTML, PHP, WooCommerce, WordPress</title>
+  <defs>
+    <!-- Rounded badge style -->
+    <style>
+      .badge-text { font-family: "Segoe UI", Roboto, Arial, sans-serif; font-weight: 700; font-size: 14px; fill: #ffffff; dominant-baseline: middle; text-anchor: middle; }
+    </style>
+
+    <!-- A reusable badge group (background + text); we'll instantiate multiple times -->
+    <g id="badgeTemplate">
+      <rect x="0" y="0" rx="10" ry="10" width="160" height="48" />
+      <text x="80" y="24" class="badge-text"></text>
+    </g>
+
+    <!-- Create a mask to clip the marquee so only the visible area shows -->
+    <clipPath id="clipBox">
+      <rect x="0" y="0" width="1000" height="120" rx="4" ry="4" />
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1000" height="120" fill="#0b1220" />
+
+  <!-- visible area for badges -->
+  <g clip-path="url(#clipBox)">
+
+    <!-- The moving group: two copies of the badge sequence for seamless looping -->
+    <g id="marquee" transform="translate(0,36)">
+      <!-- First sequence -->
+      <g id="seq1">
+        <!-- Photoshop -->
+        <g transform="translate(10,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#31A8FF"/>
+          <text x="80" y="24" class="badge-text">Photoshop</text>
+          <!-- pulse -->
+          <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.4s" repeatCount="indefinite" additive="replace" />
+        </g>
+
+        <!-- Premiere Pro -->
+        <g transform="translate(185,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#6E50A8"/>
+          <text x="80" y="24" class="badge-text">Premiere Pro</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="2.6s" repeatCount="indefinite" begin="0.15s"/>
+        </g>
+
+        <!-- Illustrator -->
+        <g transform="translate(360,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#FF9A00"/>
+          <text x="80" y="24" class="badge-text">Illustrator</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.3s" repeatCount="indefinite" begin="0.3s"/>
+        </g>
+
+        <!-- After Effects -->
+        <g transform="translate(535,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#6E50A8"/>
+          <text x="80" y="24" class="badge-text">After Effects</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="2.8s" repeatCount="indefinite" begin="0.45s"/>
+        </g>
+
+        <!-- Node.js -->
+        <g transform="translate(710,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#43853d"/>
+          <text x="80" y="24" class="badge-text">Node.js</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.07;1" dur="2.5s" repeatCount="indefinite" begin="0.6s"/>
+        </g>
+
+        <!-- CSS -->
+        <g transform="translate(885,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#1572B6"/>
+          <text x="80" y="24" class="badge-text">CSS3</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="2.2s" repeatCount="indefinite" begin="0.75s"/>
+        </g>
+      </g>
+
+      <!-- Second sequence (same badges, placed after a gap) -->
+      <g id="seq2" transform="translate(1180,0)">
+        <!-- HTML -->
+        <g transform="translate(0,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#E34F26"/>
+          <text x="80" y="24" class="badge-text">HTML5</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.4s" repeatCount="indefinite"/>
+        </g>
+
+        <!-- PHP -->
+        <g transform="translate(175,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#777BB4"/>
+          <text x="80" y="24" class="badge-text">PHP</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="2.6s" repeatCount="indefinite" begin="0.15s"/>
+        </g>
+
+        <!-- WooCommerce -->
+        <g transform="translate(350,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="180" height="48" fill="#96588A"/>
+          <text x="90" y="24" class="badge-text">WooCommerce</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="2.3s" repeatCount="indefinite" begin="0.3s"/>
+        </g>
+
+        <!-- WordPress -->
+        <g transform="translate(545,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#21759B"/>
+          <text x="80" y="24" class="badge-text">WordPress</text>
+          <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="2.8s" repeatCount="indefinite" begin="0.45s"/>
+        </g>
+
+        <!-- Filler duplicate to match width -->
+        <g transform="translate(720,0)">
+          <use href="#badgeTemplate" />
+          <rect x="0" y="0" rx="10" ry="10" width="160" height="48" fill="#31A8FF" opacity="0.02"/>
+          <text x="80" y="24" class="badge-text" opacity="0.02">.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- animate the marquee group: move left continually, loop seamlessly -->
+    <!-- total width of a full cycle ~2360 (seq1 start at 0, seq2 starts at 1180); animate translate X from 0 to -1180 -->
+    <animate xlink:href="#marquee" attributeName="transform" type="translate"
+             from="0,36" to="-1180,36" dur="14s" repeatCount="indefinite" />
+  </g>
+
+  <!-- subtle vignette -->
+  <rect x="0" y="0" width="1000" height="120" fill="url(#overlay)" opacity="0.06"/>
+</svg>
